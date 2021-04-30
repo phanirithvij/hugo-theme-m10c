@@ -6,6 +6,8 @@
   - [ ] Custom scrollbar design
   - [ ] Open in github button
     - So users can add images and videos etc.
+  - [ ] Update config.toml to use utterance preferences
+    - repo url etc.
 - Theme
   - [ ] Theme switcher button
     - [ ] OS/dark/light
