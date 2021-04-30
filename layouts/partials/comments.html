@@ -14,9 +14,9 @@
 </div>
 <div class="comments"></div>
 
-{{ $commentsTheme := .Site.Params.style.commentsTheme }}
-{{ $js := resources.Get "js/comments.js" | js.Build ( dict "params" (dict
-"theme" $commentsTheme "dark" (.Site.Params.style.darkTheme.commentsTheme |
-default "github-dark") "light" (.Site.Params.style.lightTheme.commentsTheme |
-default "github-light")) "minify" true "targetPath" "comments.min.js" ) }}
+{{ $commentsTheme := .Site.Params.style.theme }} {{ $js := resources.Get
+"js/comments.js" | js.Build ( dict "params" (dict "theme" $commentsTheme "dark"
+(.Site.Params.style.darkTheme.commentsTheme | default "github-dark") "light"
+(.Site.Params.style.lightTheme.commentsTheme | default "github-light")) "minify"
+true "targetPath" "comments.min.js" ) }}
 <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>

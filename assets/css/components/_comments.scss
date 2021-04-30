@@ -57,19 +57,23 @@
   from {
     opacity: 0;
     transform: translate(0px, 30px);
+    visibility: hidden;
   }
   to {
     opacity: 1;
     transform: translate(0px, 0px);
+    visibility: visible;
   }
 }
 @keyframes slideout {
   from {
     opacity: 1;
     transform: translate(0px, 0px);
+    visibility: visible;
   }
   to {
     opacity: 0;
     transform: translate(0px, 30px);
+    visibility: hidden;
   }
 }

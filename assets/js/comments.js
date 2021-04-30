@@ -11,7 +11,10 @@ const comments = `<script
   issue-term="pathname"
   label="comment"
   id="utter-script"
-  theme="${params.theme || params.dark || params.light}"
+  theme="${
+    params.theme === "preferred-color-scheme" ? params.theme :
+    (params.theme === "dark" ? params.dark : params.light)
+  }"
   crossorigin="anonymous"/>`;
 
 function toggleComments(ev) {
@@ -85,7 +88,8 @@ function reloadTheme(e) {
     theme: e == "dark" ? params.dark : params.light,
   };
   var utterances = document.querySelector("iframe");
-  utterances.contentWindow.postMessage(message, "https://utteranc.es");
+  // can be null because it didn't load yet
+  utterances?.contentWindow.postMessage(message, "https://utteranc.es");
 }
 window
   .matchMedia("(prefers-color-scheme: dark)")
