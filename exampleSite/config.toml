@@ -64,22 +64,22 @@ paginate = 8
   commentsTheme = "github-light"
 
 
-  # Green theme
-  # [params.style.darkTheme]
-  #  backgroundColor = "#315659"
-  #  sidebarColor = "#253031"
-  #  textColor = "#96a879"
-  #  headingTextColor = "#fff"
-  #  primaryColor = "#dad865"
-  #  commentBoxColor = "#000000"
-  #  commentsTheme = "github-dark"
+# Green theme
+# [params.style.darkTheme]
+#   backgroundColor = "#315659"
+#   sidebarColor = "#253031"
+#   textColor = "#96a879"
+#   headingTextColor = "#fff"
+#   primaryColor = "#dad865"
+#   commentBoxColor = "#000000"
+#   commentsTheme = "github-dark"
 
-  # Red theme
-  # [params.style.darkTheme]
-  #  backgroundColor = "#d35050"
-  #  sidebarColor = "#212121"
-  #  textColor = "#d6d6d6"
-  #  headingTextColor = "#d3d3d3"
-  #  primaryColor = "#ffffff"
-  #  commentBoxColor = "#000000"
-  #  commentsTheme = "github-dark"
+# Red theme
+# [params.style.darkTheme]
+#   backgroundColor = "#d35050"
+#   sidebarColor = "#212121"
+#   textColor = "#d6d6d6"
+#   headingTextColor = "#d3d3d3"
+#   primaryColor = "#ffffff"
+#   commentBoxColor = "#000000"
+#   commentsTheme = "github-dark"
