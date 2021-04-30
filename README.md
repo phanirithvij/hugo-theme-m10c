@@ -1,5 +1,15 @@
 # m10c theme
 
+## TODO
+
+- [ ] Custom scrollbar design
+- [ ] Theme switcher button
+  - [ ] OS/dark/light
+  - [ ] Localstorage save
+- [ ] Tags page
+- [ ] Open in github button
+  - So users can add images and videos etc.
+
 ![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
 
 A Hugo minimalistic theme for bloggers
