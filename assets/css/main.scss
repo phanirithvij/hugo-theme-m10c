@@ -46,6 +46,11 @@
 {{ end }}
 
 {{ if $prefers_color_scheme }}
+    // https://www.freecodecamp.org/news/how-to-detect-a-users-preferred-color-scheme-in-javascript-ec8ee514f1ef/
+    // under 'initial js approach' section
+    html {
+        content: var(--current-theme, "light");
+    }
     @media (prefers-color-scheme: dark){
         {{ with .Site.Params.style.darkTheme }}
             :root {
@@ -55,6 +60,7 @@
                 --heading-text-color: {{ .headingTextColor }};
                 --primary-color: {{ .primaryColor }};
                 --comment-box-color: {{ .commentBoxColor }};
+                --current-theme: "dark";
             }
         {{ end }}
     }
@@ -67,6 +73,7 @@
                 --heading-text-color: {{ .headingTextColor }};
                 --primary-color: {{ .primaryColor }};
                 --comment-box-color: {{ .commentBoxColor }};
+                --current-theme: "light";
             }
         {{ end }}
     }

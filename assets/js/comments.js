@@ -5,16 +5,57 @@ const commentsBox = document.querySelector(".comments");
 const commentBtn = document.querySelector("#show-comments");
 commentBtn.onclick = (ev) => toggleComments(ev);
 var showing = false;
+
+// getThemeFile return the exact theme we need to request from utterances
+function getThemeFile() {
+  const allowedThemes = ["preferred-color-scheme", "light", "dark"];
+  const lightThemes = ["github-light", "boxy-light"];
+  const darkThemes = [
+    "github-dark",
+    "github-dark-orange",
+    "icy-dark",
+    "dark-blue",
+    "photon-dark",
+  ];
+
+  // handling prefered-color-scheme theme overrides ourselves
+
+  var paramTheme = params.theme;
+  var paramLight = params.light;
+  var paramDark = params.dark;
+
+  // check if theme is valid
+  if (!allowedThemes.includes(paramTheme)) {
+    paramDark = allowedThemes[1]; // fallback light
+  }
+
+  if (params.theme === "preferred-color-scheme") {
+    if (params.dark == null && params.light == null) {
+      return params.theme;
+    }
+    // set params theme to html content which we are setting in main.scss
+    // a function to get current theme i.e. dark/light from system
+    paramTheme = window.getComputedStyle(document.documentElement).content.replace(/\"/g, "");
+  }
+
+  // check if override values are valid
+  if (!darkThemes.includes(params.dark)) {
+    paramDark = darkThemes[0]; // fallback github-dark
+  }
+  if (!lightThemes.includes(params.light)) {
+    paramLight = lightThemes[0]; // fallback github-light
+  }
+
+  return (paramTheme === "dark" ? paramDark : paramLight);
+}
+
 const comments = `<script
   src="https://utteranc.es/client.js"
   repo="phanirithvij/phanirithvij.github.io"
   issue-term="pathname"
   label="comment"
   id="utter-script"
-  theme="${
-    params.theme === "preferred-color-scheme" ? params.theme :
-    (params.theme === "dark" ? params.dark : params.light)
-  }"
+  theme="${getThemeFile()}"
   crossorigin="anonymous"/>`;
 
 function toggleComments(ev) {
@@ -70,17 +111,7 @@ function hideComments() {
   toggleCommentVisibility();
 }
 
-// THEME changes listener
-
-const autoTheme = "preferred-color-scheme";
-const lightThemes = ["github-light", "boxy-light"];
-const darkThemes = [
-  "github-dark",
-  "github-dark-orange",
-  "icy-dark",
-  "dark-blue",
-  "photon-dark",
-];
+// THEME switching changes listener
 // https://github.com/utterance/utterances/issues/170
 function reloadTheme(e) {
   const message = {
@@ -89,7 +120,8 @@ function reloadTheme(e) {
   };
   var utterances = document.querySelector("iframe");
   // can be null because it didn't load yet
-  utterances?.contentWindow.postMessage(message, "https://utteranc.es");
+  utterances?.
+  contentWindow.postMessage(message, "https://utteranc.es");
 }
 window
   .matchMedia("(prefers-color-scheme: dark)")
