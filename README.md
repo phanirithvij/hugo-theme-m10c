@@ -2,15 +2,18 @@
 
 ## TODO
 
-- [ ] Custom scrollbar design
-- [ ] Theme switcher button
-  - [ ] OS/dark/light
-  - [ ] Localstorage save
-- [ ] Tags page
-- [ ] Open in github button
-  - So users can add images and videos etc.
+- Comments
+  - [ ] Custom scrollbar design
+  - [ ] Open in github button
+    - So users can add images and videos etc.
+- Theme
+  - [ ] Theme switcher button
+    - [ ] OS/dark/light
+    - [ ] Localstorage save
+- Pages
+  - [ ] Tags page
 
-![Intro](https://github.com/vaga/hugo-theme-m10c/blob/master/images/cover.png)
+![Intro](images/cover.png)
 
 A Hugo minimalistic theme for bloggers
 
@@ -30,17 +33,20 @@ Main features:
 ### Installation
 
 Create a new Hugo site:
+
 ```bash
 $ hugo new site [path]
 ```
 
 Clone this repository into `themes/` directory:
+
 ```bash
 $ cd [path]
 $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 ```
 
-Add this line  in the `config.toml` file:
+Add this line in the `config.toml` file:
+
 ```toml
 theme = "m10c"
 ```
@@ -86,7 +92,7 @@ To change theme colors, add the following lines in `params`:
   primaryColor = "#ffffff"
 ```
 
-If you want the above theme colors, you can see the [exampleSite/config.toml](/exampleSite/config.toml) file.
+If you want the above theme colors, you can see the [exampleSite/config.toml](exampleSite/config.toml) file.
 
 ### Styling
 

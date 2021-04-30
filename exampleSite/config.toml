@@ -34,26 +34,52 @@ paginate = 8
     name = "Twitter"
     url = "https://twitter.com/gohugoio"
 
-  # Default theme
-  #[params.style]
-  #  darkestColor = "#242930"
-  #  darkColor = "#353b43"
-  #  lightColor = "#afbac4"
-  #  lightestColor = "#ffffff"
-  #  primaryColor = "#57cc8a"
+# Themes
+# dark vs light themes
+[params.style]
+  theme = "preferred-color-scheme" # 3 values allowed, dark, light, preferred-color-scheme
+
+# At least one is required
+
+# Default dark theme
+[params.style.darkTheme]
+  sidebarColor = "#122420"
+  backgroundColor = "#000000"
+  textColor = "#afbac4"
+  headingTextColor = "#fafafa"
+  primaryColor = "#38ada7"
+  commentBoxColor = "#000000"
+  # 5 allowed github-dark, github-dark-orange, icy-dark, dark-blue, photon-dark
+  commentsTheme = "github-dark"
+
+# default light theme
+[params.style.lightTheme]
+  backgroundColor = "#fafafa"
+  sidebarColor = "#39d48c"
+  textColor = "#111111"
+  headingTextColor = "#000000"
+  primaryColor = "#023432"
+  commentBoxColor = "#ffffff"
+  # 2 allowed github-light, boxy-light
+  commentsTheme = "github-light"
+
 
   # Green theme
-  #[params.style]
-  #  darkestColor = "#315659"
-  #  darkColor = "#253031"
-  #  lightColor = "#96a879"
-  #  lightestColor = "#fff"
+  # [params.style.darkTheme]
+  #  backgroundColor = "#315659"
+  #  sidebarColor = "#253031"
+  #  textColor = "#96a879"
+  #  headingTextColor = "#fff"
   #  primaryColor = "#dad865"
+  #  commentBoxColor = "#000000"
+  #  commentsTheme = "github-dark"
 
   # Red theme
-  #[params.style]
-  #  darkestColor = "#d35050"
-  #  darkColor = "#212121"
-  #  lightColor = "#d6d6d6"
-  #  lightestColor = "#d3d3d3"
+  # [params.style.darkTheme]
+  #  backgroundColor = "#d35050"
+  #  sidebarColor = "#212121"
+  #  textColor = "#d6d6d6"
+  #  headingTextColor = "#d3d3d3"
   #  primaryColor = "#ffffff"
+  #  commentBoxColor = "#000000"
+  #  commentsTheme = "github-dark"
