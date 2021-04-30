@@ -1,6 +1,6 @@
 .app-header {
   padding: 2.5em;
-  background: $darkest-color;
+  background: $sidebar-color;
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
 
 .app-header-social {
   font-size: 2em;
-  color: $lightest-color;
+  color: $heading-text-color;
 
   a {
     margin: 0 0.1em;

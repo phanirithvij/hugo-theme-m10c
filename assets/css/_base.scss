@@ -9,12 +9,12 @@ html {
 body {
   margin: 0;
   font-family: sans-serif;
-  background: $dark-color;
-  color: $light-color;
+  background: $background-color;
+  color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $lightest-color;
+  color: $heading-text-color;
 }
 
 a {
@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $lightest-color;
+    color: $heading-text-color;
   }
 }
 
@@ -34,7 +34,7 @@ a {
 code {
   font-family: monospace,monospace;
   font-size: 1em;
-  color: rgba($light-color, .8);
+  color: rgba($text-color, .8);
 }
 
 pre {
@@ -52,8 +52,8 @@ pre {
 }
 
 ::selection {
-  background: rgba($light-color, .25);
+  background: rgba($selection-text-color, .25);
 }
 ::-moz-selection {
-  background: rgba($light-color, .25);
+  background: rgba($selection-text-color, .25);
 }

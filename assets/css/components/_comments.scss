@@ -1,0 +1,75 @@
+.hide {
+  animation: slideout 0.5s ease forwards;
+}
+.show {
+  animation: slidein 0.5s ease forwards;
+}
+.comments {
+  position: fixed;
+  max-height: 80vh;
+  min-height: 10vh;
+  overflow-y: auto;
+  min-width: clamp(60%, 585px, 80%);
+  bottom: 9vh;
+  right: 2vw;
+  opacity: 0;
+  background: $comments-color;
+  padding: 2vw;
+  border-radius: 3%;
+  border: 2px solid $heading-text-color;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.26);
+}
+@media (max-width: 940px) {
+  .comments {
+    left: 2vw;
+  }
+}
+@media (min-width: 1295px) {
+  .comments {
+    min-width: 45%;
+    right: 1vw;
+  }
+}
+.utterances {
+  /* remove margins */
+  margin: 0;
+}
+#show-comments {
+  position: fixed;
+  padding: 10px;
+  bottom: 1vh;
+  z-index: 3;
+  border-radius: 200px;
+  right: 1vw;
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.322);
+}
+#show-comments:hover {
+  cursor: pointer;
+  color: #28c5ca;
+  background: #a9d8cb2e;
+}
+#show-comments > svg {
+  fill: #38ada7;
+  height: 30px;
+  transform: translate(-6%, 17%) scale(0.785);
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translate(0px, 30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes slideout {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0px, 30px);
+  }
+}
