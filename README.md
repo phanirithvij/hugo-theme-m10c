@@ -2,7 +2,9 @@
 
 ## TODO
 
+- [ ] Publish as a new theme (say m10c-extended)
 - Comments
+  - [ ] If else disqus/utterances (useful for others)
   - [ ] Custom scrollbar design
   - [ ] Open in github button
     - So users can add images and videos etc.
