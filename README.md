@@ -87,6 +87,8 @@ To add a social link, add the following lines in `params`:
 
 To change theme colors, add the following lines in `params`:
 
+TODO change this
+
 ```
 [params.style]
   darkestColor = "#d35050"
