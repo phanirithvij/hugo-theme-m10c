@@ -11,6 +11,9 @@
             -
             {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
             {{ .ReadingTime }} min read
+            -
+            {{ partial "icon.html" (dict "ctx" $ "name" "file-text") }}
+            {{ .WordCount }} words
           </span>
         </li>
       {{ end }}
