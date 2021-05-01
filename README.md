@@ -18,7 +18,14 @@
   - [ ] Fix markdown blockquotes, this does it [theme](https://themes.gohugo.io//theme/LeaveIt/post/markdown-syntax/)
   - [ ] Figure out a way to link to markdown headings
 - Pages
-  - [ ] Tags page
+  - [ ] Fix `code` css but only for single backticks codes
+    ```css
+    :not(pre) > code {
+      color: #0ad0c6;
+      background: #213030;
+    }
+    ```
+  - [x] Tags page
 
 ![Intro](images/cover.png)
 
