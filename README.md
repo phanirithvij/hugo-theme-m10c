@@ -14,6 +14,9 @@
   - [ ] Theme switcher button
     - [ ] OS/dark/light
     - [ ] Localstorage save
+  - [ ] Prism.js downloaded import it and use it
+  - [ ] Fix markdown blockquotes, this does it [theme](https://themes.gohugo.io//theme/LeaveIt/post/markdown-syntax/)
+  - [ ] Figure out a way to link to markdown headings
 - Pages
   - [ ] Tags page
 
